@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "babel-eslint": "^4.1.3",
+    "eslint": "^1.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "font-awesome": "^4.4.0",
+    "jquery": "^2.1.4",
+    "vue": "^0.12.16"
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>POS System</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div class="container">
+    <div class="row" id="pos">
+        <div class="col-md-8 col-md-offset-2">
+            <h1>Point of Sale</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-striped table-hover table-bordered table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Number of Items</th>
+                                <th>Amount</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Apple</td>
+                                <td>
+                                    <span>3</span>
+                                </td>
+                                <td>$3.00</td>
+                                <td><i class="fa fa-times"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Milk</td>
+                                <td>
+                                    <span>2</span>
+                                </td>
+                                <td>$5.00</td>
+                                <td><i class="fa fa-times"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Pen</td>
+                                <td>
+                                    <span>1</span>
+                                </td>
+                                <td>$2.00</td>
+                                <td><i class="fa fa-times"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Subtotal:</td>
+                                <td>$10.00</td>
+                            </tr>
+                            <tr>
+                                <td>Tax:</td>
+                                <td>$0.63</td>
+                            </tr>
+                            <tr>
+                                <td>Total:</td>
+                                <td>$10.63</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <div class="list-group">
+                        <button class="list-group-item item">
+                            <strong>Apple</strong> - 1.00
+                        </button>
+                        <button class="list-group-item item">
+                            <strong>Milk</strong> - 2.50
+                        </button>
+                        <button class="list-group-item item">
+                            <strong>Pen</strong> - 2.00
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/vue/dist/vue.min.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
