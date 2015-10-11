@@ -12,21 +12,44 @@
                 this.items = items;
             }.bind(this), 'json');
         },
-        computed: {
-            subtotal: function() {
-                var subtotal = 0;
+        components: {
+            transaction: {
+                template: '#transaction-template',
+                props: ['items', 'edit', 'remove'],
+                computed: {
+                    subtotal: function() {
+                        var subtotal = 0;
 
-                this.lineItems.forEach(function(item) {
-                    subtotal += item.item.price * item.numberOfItems;
-                });
+                        this.items.forEach(function(item) {
+                            subtotal += item.item.price * item.numberOfItems;
+                        });
 
-                return subtotal;
+                        return subtotal;
+                    },
+                    tax: function() {
+                        return this.subtotal * 0.065;
+                    },
+                    total: function() {
+                        return this.subtotal + this.tax;
+                    }
+                },
+                methods: {
+                    toggleEdit: function(item) {
+                        this.edit(item);
+                    },
+                    removeItem: function(item) {
+                        this.remove(item);
+                    }
+                }
             },
-            tax: function() {
-                return this.subtotal * 0.065;
-            },
-            total: function() {
-                return this.subtotal + this.tax;
+            itemList: {
+                template: "#item-list-template",
+                props: ['items', 'add'],
+                methods: {
+                    itemClicked: function(item) {
+                        this.add(item);
+                    }
+                }
             }
         },
         methods: {
