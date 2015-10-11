@@ -1,7 +1,11 @@
 {
   "devDependencies": {
     "babel-eslint": "^4.1.3",
-    "eslint": "^1.6.0"
+    "browserify": "^11.2.0",
+    "eslint": "^1.6.0",
+    "gulp": "^3.9.0",
+    "partialify": "^3.1.5",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.5",

@@ -1,0 +1,5 @@
+<div class="list-group">
+    <button class="list-group-item item" v-repeat="item: items" v-on="click: itemClicked(item)">
+        <strong>{{ item.name }}</strong> - {{ item.price }}
+    </button>
+</div>
